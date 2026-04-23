@@ -1,0 +1,6 @@
+> self comp:rm GhostTheme 
+> self do "addcomp $ID ChameleonDisguise"
+> self do "vvwrite /entity/$ID/ChameleonDisguise/SourceProto 'PosterLegitHaveYouSeenHimJuanToe'"
+> self inventory:getnamed "belt" vv:write "Clothing/ClothingVisuals" "{belt: [{state: invis, visible: False}]}" vv:write "Clothing/EquippedState" "invis"
+> self inventory:getnamed "id" vv:write "Clothing/ClothingVisuals" "{belt: [{state: invis, visible: False}]}" vv:write "Clothing/EquippedState" "invis"
+> self inventory:getnamed "back" vv:write "Clothing/ClothingVisuals" "{belt: [{state: invis, visible: False}]}" vv:write "Clothing/EquippedState" "invis"

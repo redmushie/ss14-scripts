@@ -1,0 +1,7 @@
+> marked comp:ensure ActiveRadio
+> marked vv:write "/ActiveRadio/Channels" "[Binary]"
+> marked vv:write "/ActiveRadio/GlobalReceive" "true"
+> marked comp:ensure IntrinsicRadioTransmitter
+> marked vv:write "/IntrinsicRadioTransmitter/Channels" "[Binary]"
+> marked comp:ensure EmagSiliconLaw
+> marked language:add Machine true true

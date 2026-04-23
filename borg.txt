@@ -1,0 +1,6 @@
+bind F2 Command "me beeps"
+bind F3 Command "me chimes"
+bind F4 Command "me buzzes twice"
+bind F5 Command "me honks"
+bind MouseButton4 Command "me pings"
+bind MouseButton5 Command "me buzzes"

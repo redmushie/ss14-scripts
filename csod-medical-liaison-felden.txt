@@ -1,0 +1,47 @@
+# NoAntag
+> self comp:ensure AntagImmune
+> self comp:ensure NoObjectiveTarget
+
+# Clothing
+> self spawn:in "jumpsuit" ClothingUniformJumpsuitCentcomOfficerBlack
+#> self spawn:in "outerClothing" ClothingOuterVestTank
+> self spawn:in "neck" ClothingNeckStethoscope
+> self spawn:in "belt" CentcommVibrobladeSheathFilled
+> self spawn:in "shoes" ClothingShoesBootsCombatFiled
+> self spawn:in "ears" ClothingHeadsetAltCentCom
+> self spawn:in "eyes" ClothingEyesGlassesCentComm
+> self spawn:in "outerClothing" ClothingOuterCoatLabOpened
+> self spawn:in "gloves" ClothingHandsGlovesCombat comp:ensure Insulated
+# > self spawn:in "mask" "ClothingMask"
+> self spawn:in "id" CentcomPDA
+
+# Weapons
+> self spawn:in "pocket1" WeaponM1911 => $pistol
+> ent $pistol comp:ensure AccessReader
+> ent $pistol vv:write "/AccessReader/AccessLists" "[[CentralCommand]]"
+> ent $pistol comp:ensure Lock
+> ent $pistol vv:write "/Lock/AllowRepeatedLocking" "true"
+> ent $pistol vv:write "/Lock/AutoLock" "true"
+> ent $pistol vv:write "/Lock/AutoUnlock" "true"
+> ent $pistol vv:write "/Lock/MindShieldLock" "true"
+> self spawn:in "pocket2" BoxFolderCentComClipboard
+
+# Bag
+> self spawn:in "back" ClothingBackpackSatchelCentcomm => $bag
+> ent $bag spawn:in "storagebase" BoxSurvivalMedical
+> ent $bag spawn:in "storagebase" RubberStampCMD
+> ent $bag spawn:in "storagebase" RubberStampCentcom
+> ent $bag spawn:in "storagebase" RubberStampApproved
+> ent $bag spawn:in "storagebase" RubberStampDenied
+
+# Name and job
+> self do "vvwrite /entity/$ID/Name \"CSOD Medical Liaison 'Felden'\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CSOD Medical Liaison\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Felden\""
+
+# Implants
+> self comp:ensure Implanted
+> self spawn:in "implant" "BluespaceImplant"
+> self spawn:in "implant" "MindShieldImplant"
+> self spawn:in "implant" "TrackingImplant"
+> self spawn:in "implant" "DeathRattleImplantCentcomm"

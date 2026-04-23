@@ -1,0 +1,3 @@
+> ent $bag spawn:in "storagebase" RubberStampCSD => $fraudStamp
+> var $fraudStamp vv:write "/MetaData/_entityName" "FRAUDULENT rubber stamp"
+> var $fraudStamp vv:write "/Stamp/StampedName" "FRAUDULENT"

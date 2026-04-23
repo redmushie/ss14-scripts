@@ -1,0 +1,11 @@
+> self spawn:on AbductorPlushie => $Abductor
+> ent $Abductor comp:ensure Hands
+> ent $Abductor vv:write "/Hands/Hands" "{ hand_right: { location: Right }, hand_left: { location: Left } }"
+> ent $Abductor vv:write "/Hands/SortedHands" "[ hand_right, hand_left ]"
+
+> ent $Abductor comp:ensure Inventory
+> ent $Abductor comp:ensure ComplexInteraction
+> ent $Abductor comp:ensure CombatMode
+
+#> ent $Abductor container:create "hand_left"
+#> ent $Abductor spawn:in "hand_left" Throngler => $Throngler

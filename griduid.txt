@@ -1,0 +1,1 @@
+> ent $self vv:read "/Transform/GridUid"

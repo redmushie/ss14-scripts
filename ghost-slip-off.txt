@@ -1,0 +1,1 @@
+> entities prototyped MobObserver vv:write "/MovementIgnoreGravity/Weightless" "false"

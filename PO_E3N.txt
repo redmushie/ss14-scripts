@@ -1,0 +1,82 @@
+# PO Ethan Loadout
+
+# Mindshield
+> self spawn:on MobIPC => $IPC
+> ent $IPC do "vvwrite /entity/$ID/Name \"Petty Officer E3N 'Ethan'\""
+> ent $IPC comp:ensure Implanted
+#> ent $IPC spawn:in "implant" "BluespaceImplant"
+> ent $IPC spawn:in "implant" "MindShieldImplant"
+> ent $IPC spawn:in "implant" "TrackingImplant"
+> ent $IPC spawn:in "implant" "DeathRattleImplantCentcomm"
+> ent $IPC comp:ensure AntagImmune
+> ent $IPC container:getentities "cell_slot" delete
+> ent $IPC spawn:in "cell_slot" PowerCellAntiqueProto
+> ent $IPC spawn:in "key_slots" EncryptionKeyStationMaster
+> ent $IPC spawn:in "key_slots" EncryptionKeyCentCom
+
+# Clothing
+> ent $IPC spawn:in "jumpsuit" ClothingUniformJumpsuitERTLeader
+> ent $IPC spawn:in "outerClothing" ClothingOuterHardsuitERTLeader 
+> ent $IPC spawn:in "neck" ClothingNeckMantleERTLeader
+#> ent $IPC spawn:in "head" 
+> ent $IPC spawn:in "shoes" ClothingShoesBootsMagERT => $shoes
+> ent $IPC spawn:in "eyes" ClothingEyesHudCentComm => $hud
+#> ent $IPC spawn:in "ears"
+> ent $IPC spawn:in "gloves" ClothingHandsGlovesCombat
+#> ent $IPC spawn:in "mask"
+> ent $IPC spawn:in "id" NTNCCSPDA
+
+# Weapons
+> ent $IPC spawn:in "pocket1" WeaponEnergyMagnumGun => $gun
+> ent $IPC spawn:in "pocket2" TelescopicShield
+> ent $IPC spawn:in "suitstorage" CoolingUnit
+> ent $shoes spawn:in "item" ThrowingKnife
+
+# Bag
+> ent $IPC spawn:in "back" ClothingBackpackThermalCloakTSF => $bag
+> ent $bag container:getentities "cell_slot" delete
+> ent $bag spawn:in "cell_slot" PowerCellAntiqueProto
+> ent $bag spawn:in "storagebase" CentcommVibroblade
+> ent $bag spawn:in "storagebase" ClothingMaskWeldingGas
+> ent $bag spawn:in "storagebase" CableHVStack
+> ent $bag spawn:in "storagebase" WelderIndustrialAdvanced
+> ent $bag spawn:in "storagebase" Screwdriver
+> ent $bag spawn:in "storagebase" PowerCellAntiqueProto
+> ent $bag spawn:in "storagebase" CCEmag
+> ent $bag spawn:in "storagebase" AccessOveriderRecharging
+> ent $bag spawn:in "storagebase" RubberStampCentcom => $GSOstamp
+#> ent $bag spawn:in "storagebase" RightArmCyberBulwark
+#> ent $bag spawn:in "storagebase" LeftArmCyberHerakles
+
+# hud
+> ent $hud vv:write "/ShowHealthBars/DamageContainers" "[Inorganic, Silicon, IPC, Biological]" 
+> ent $hud comp:ensure ShowAccessReaderSettings
+
+# Belt
+> ent $IPC spawn:in "belt" ClothingBeltBlueShieldMedicalBelt => $belt
+> ent $belt spawn:in "storagebase" Truncheon
+> ent $belt spawn:in "storagebase" Handcuffs
+> ent $belt spawn:in "storagebase" Handcuffs
+> ent $belt spawn:in "storagebase" CombatMedipen
+> ent $belt spawn:in "storagebase" CombatMedipen
+> ent $belt spawn:in "storagebase" MedkitCombatFilled
+> ent $belt spawn:in "storagebase" WeaponMultiphaseGun
+> ent $belt spawn:in "storagebase" CombatMedipen
+> ent $belt spawn:in "storagebase" CombatMedipen
+
+# Gun customization
+> ent $gun comp:ensure AccessReader 
+> ent $gun vv:write "/AccessReader/AccessListsOriginal" "[[CentralCommand]]" 
+> ent $gun vv:write "/AccessReader/AccessLists" "[[CentralCommand]]" 
+> ent $gun comp:ensure Lock vv:write "/Lock/AutoLock" "true" 
+> ent $gun vv:write "/Lock/AutoUnlock" "true" 
+> ent $gun vv:write "/Lock/MindShieldLock" "true"
+
+# Stamp
+> val EntityUid $GSOstamp vv:write "/MetaData/_entityName" "Greenshield rubber stamp"
+> val EntityUid $GSOstamp vv:write "/Stamp/StampedName" "Greenshield Officer"
+
+# Misc
+> ent $IPC do "vvwrite /entity/$ID//ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"Green Shield\""
+> ent $IPC do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Petty Officer E3N 'Ethan'\""
+> ent $IPC do "vvwrite /entity/$ID/TextToSpeech/VoicePrototypeId \"borgMozillaAu2\""

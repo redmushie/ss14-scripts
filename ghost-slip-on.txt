@@ -1,0 +1,1 @@
+> entities prototyped MobObserver where { comp:has Actor  } vv:write "/MovementIgnoreGravity/Weightless" "true"

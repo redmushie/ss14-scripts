@@ -1,0 +1,16 @@
+> self not prototyped AdminObserver do "aghost"
+> self inventory:getnamed "belt" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
+> self inventory:getnamed "id" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
+> self inventory:getnamed "back" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
+> self vv:write "/MetaData/_entityName" "Red Mushie (dev, not admin)"
+> self vv:write "/MetaData/_entityDescription" ""
+> self vv:write "/MovementSpeedModifier/BaseSprintSpeed" "20"
+> self vv:write "/MovementSpeedModifier/BaseWalkSpeed" "10"
+> self comp:ensure RgbLightController
+> self comp:ensure ShowCriminalRecordIcons
+> self comp:ensure ShowJobIcons
+> self comp:ensure ShowMindShieldIcons
+> self comp:ensure ShowSyndicateIcons
+> self comp:ensure ShowHealthBars
+#> ent $self scale:set [0.6,0.6]
+#> ent $self comp:ensure KillSign vv:write "KillSign/Sprite/RsiPath" "_Starlight/Objects/Misc/killsign.rsi" vv:write "KillSign/Sprite/RsiState" "moff"
