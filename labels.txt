@@ -1,0 +1,67 @@
+,[bold][color=#89f77f]AMOX|AmniaAIR|30/5u|25OD
+,[bold][color=#4da0bd]DEXP|AsphxBldls|35/5u|25OD
+,[bold][color=#0064c8]SALINE|Bloodlevel|15%/5u
+,[bold][color=#6e0f22]INAP|Stop Bleed|SAFE
+,[bold][color=#ba7d7d]TRANX|Stop Bleed|Use5u
+,[bold][color=#ffffff]OMNI|ALL-Blood|20/5u|Use5u
+;[bold][color=#efefef]EPI|ALL|15/5u|20OD|CritOnly
+;[bold][color=#00e5ff]TRIC|ALL|10/5u|<50dmg
+;[bold][color=#ff7db5]DocD|ALL|5/5u|30OD|+Drunk
+;[bold][color=#ff6d01]ICHOR|All|20/5u
+:[bold][color=#ffaa00]BIC|BRT|15/5u|15OD+MixBRT
+:[bold][color=#ff3636]BRUIZ|Blunt|45/5u|11OD+BRT
+:[bold][color=#788282]LACE|Slash|40/5u|12OD+BRT
+:[bold][color=#b9bf93]PNCT|Pierce|50/5u|11OD+BRT
+:[bold][color=#674ea7]POLY|AIRBRT|22/5u11/5u|30OD
+.[bold][color=#216b85]DERM|BRN-Caus|15/5u|10OD
+.[bold][color=#ff7db5]LEPO|Cold|40/5u|<20kgOD
+.[bold][color=#964e24]PYRA|Heat|50/5u|15OD
+.[bold][color=#9668fc]INSU|Shock|30/5u|12OD+<20kg
+.[bold][color=#e0a5b9]SIGY|Caustic|30/5u|16OD
+.[bold][color=#f4dab8]SIDER|Caustic|50/5u|SAFE
+`[bold][color=#bd5902]ARITH|Rads|30/5u|+BRTDmg
+`[bold][color=#4f5457]CHARCOAL|CleanBld|Use5u
+`[bold][color=#64ffe6]DIPH|Poison|30/5u
+`[bold][color=#6853a3]DYLO|Poison|10/5u|20OD
+`[bold][color=#4cb580]HYRO|Rads|10/5u
+`[bold][color=#c8ff75]PHAL|Cell|10/5u|+RadsDmg
+`[bold][color=#292d72]STELLI|Poison|40/5u|SAFE
+`[bold][color=#520e30]ULTRA|Poison|60/5u|20OD+BRT
+^[bold][color=#0091ff]CRYOX|ALL-CELL|15/5u|ALIVE
+^[bold][color=#32cd32]DOXA|CELL|20/5u|ALIVE
+^[bold][color=#0bb7df]ARCRYOX|BRT+BRN|15/5u|DEAD
+^[bold][color=#89f77f]ALOX|BURN|40/5u|DEAD
+^[bold][color=#850063]CHRON|RADS|50/5u|DEAD
+^[bold][color=#86a5bd]NECRO|ALL-CELL|15/5u|DEAD
+^[bold][color=#b5e36d]OPPO|ROT|200s/5u|<150K
+~[bold][color=#999999]OCULINE|Eyesight|Use5u
+~[bold][color=#2d5708]ETHYL|Dizzy+Drunk|60s/5u
+~[bold][color=#27870a]HALOPER|-Stims|+Sleep
+~[bold][color=#474793]CHLRL HYDRT|Sleep|20OD
+,[bold][color=#86caf7]AMBUZ|10uCURE|UseSyringe
+,[bold][color=#1274b5]AMBUPULS|CURE 5/u|Vaccine
+~[bold][color=#77b58e]AMMONIA|Heal plant+Nutri
+~[bold][color=#0091ff]CRYOX|Reduce Plant Age/1u
+~[bold][color=#85200c]DIETH|Speed Plant Growth
+~[bold][color=#5b4695]DYLO|Remove Toxin
+~[bold][color=#674ea7]L4Z|low plant dmg /w Muta
+~[bold][color=#00ff00]MUTA|mutates per 1u
+~[bold][color=#c8ff75]PHAL|Remove Unviable
+~[bold][color=#38761d]ROBUST|3 Potency/1u
+~[bold][color=#3cb371]SEDIN|RestoreSeeds|UseLittle
+[color=#ff6600][bold]Ash's Salv Package
+[color=#44ff44][bold]Ash's Botany Package
+[color=#b9bf93]PUNCTURE [color=#0064c8]Saline
+[color=#b9bf93]PUNCTURE [color=#89f77f]Amox
+[color=#964e24]HEAT [color=#0064c8]Saline
+[color=#964e24]HEAT [color=#89f77f]Amox
+[color=#ffffff]OMNI [color=#0064c8]Saline
+[color=#ffffff]OMNI [color=#89f77f]Amox
+[color=#ff00ff]rainbows <3
+[bold][color=#ffffff]METH|Jitter,+20%Spd|Use15u
+[color=#964e24]HEAT Pyra/Derma
+[bold][color=#ffffff]METH+OMNI|Have fun I guess
+[bold][color=#77b58e]MINDBRK|Rainbows|100s/5u
+[color=#964e24]Pyra 8u [color=#ffaa00]Bic 12u
+[color=#efefef]CRIT [color=#0064c8]Saline
+[color=#efefef]CRIT [color=#89f77f]Amox
