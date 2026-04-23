@@ -1,0 +1,62 @@
+version: 1
+binds:
+- key: F2
+  type: Command
+  function: me flaps wings.
+- key: MouseButton4
+  type: Command
+  function: me chitters.
+- key: MouseButton5
+  type: Command
+  function: me squeaks.
+- key: Shift
+  type: Toggle
+  function: Walk
+- key: R
+  function: EditorRotateObject
+- canFocus: True
+  key: MouseMiddle
+  function: Point
+- key: C
+  function: ToggleStanding
+- key: F11
+  function: CameraRotateLeft
+- key: F12
+  function: CameraRotateRight
+- key: F10
+  function: CameraReset
+- key: B
+  function: ToggleRoundEndSummaryWindow
+- key: C
+  function: ToggleKnockdown
+- key: F
+  function: EditorFlipObject
+- key: N
+  function: OpenCharacterMenu
+- key: F3
+  type: Command
+  function: me COUGHS
+- key: F4
+  type: Command
+  function: me cries.
+- key: F9
+  type: Toggle
+  function: ShowDebugMonitors
+- key: Y
+  function: OpenEmotesMenu
+- key: Tab
+  function: OpenEmotesMenu
+- mod1: Shift
+  key: G
+  function: SmartEquipSuitStorage
+leaveEmpty:
+- CycleChatChannelForward
+- CycleChatChannelBackward
+- ShowEscapeMenu
+- RotateObjectCounterclockwise
+- ToggleFullscreen
+- OpenTileSpawnWindow
+- OpenDecalSpawnWindow
+- SmartEquipPocket1
+- SmartEquipPocket2
+...
