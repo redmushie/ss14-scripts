@@ -1,3 +1,6 @@
+# Author: redmushie (SS14/GitHub) / redmushroom (Discord)
+# Owner: ShockShard (SS14/Discord)
+
 # NoAntag
 > self comp:ensure AntagImmune
 > self comp:ensure NoObjectiveTarget

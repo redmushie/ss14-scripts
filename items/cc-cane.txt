@@ -1,0 +1,7 @@
+# Author: redmushie
+# Owner: redmushie
+# Free to use
+
+> self spawn:on CaneNT => $cane
+> ent $cane comp:ensure BatterySelfRecharger
+> ent $cane vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "8"

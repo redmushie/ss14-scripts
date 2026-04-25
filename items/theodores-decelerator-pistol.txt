@@ -1,0 +1,33 @@
+# Author: redmushie
+# Owner: redmushie
+# Feel free to use this to learn how to do this kind of VV'ing, but please don't
+# copy the deceleration functionality, it's Theodore's self-made pistol!
+
+# Pistol
+> self spawn:on WeaponPulsePistol => $pistol
+> ent $pistol vv:write "/BatteryWeaponFireModes/CurrentFireMode" "0"
+> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes" "[{proto: TaserBolt}, {proto: AntiParticlesProjectile}, {proto: DestroyBeam}]"
+> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[0]" "{proto: TaserBolt, fireCost: 215, pacifismAllowedMode: true, magState: stun, visualState: stun}"
+> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[1]" "{proto: DestroyBeam, fireCost: 215, magState: destroy, visualState: destroy}"
+> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[2]" "{proto: AntiParticlesProjectile, fireCost: 260, magState: kill, visualState: kill}"
+> ent $pistol vv:write "/GunFireModeSounds/Sounds[0]" "{ path: /Audio/Weapons/Guns/Gunshots/taser.ogg }"
+> ent $pistol vv:write "/GunFireModeSounds/Sounds[1]" "{ path: /Audio/Weapons/Guns/Gunshots/laser3.ogg }"
+> ent $pistol vv:write "/GunFireModeSounds/Sounds[2]" "{ path: /Audio/Weapons/emitter.ogg, params: { pitch: 2 }}"
+> ent $pistol vv:write "/Gun/FireRate" "2"
+> ent $pistol vv:write "/Gun/FireRateModified" "2"
+# > ent $pistol vv:write "/Battery/MaxCharge" "1600" # does not work
+
+# Recharging
+> ent $pistol comp:ensure BatterySelfRecharger
+> ent $pistol vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "120"
+
+# Note: These Lock parameters don't sync. It'll still work, you just won't hear it yourself.
+#       Oddly enough, everyone else *will* hear it lock/unlock.
+> ent $pistol comp:ensure Lock
+> ent $pistol vv:write "/Lock/AllowRepeatedLocking" "true"
+> ent $pistol vv:write "/Lock/AutoLock" "true"
+> ent $pistol vv:write "/Lock/AutoUnlock" "true"
+> ent $pistol vv:write "/Lock/MindShieldLock" "true"
+
+> ent $pistol vv:write "/MetaData/_entityName" "decelerator pistol"
+> ent $pistol vv:write "/MetaData/_entityDescription" "A finely crafted high-tech pistol equipped with a microreactor designed to let the wielder decelerate singularities with ease."

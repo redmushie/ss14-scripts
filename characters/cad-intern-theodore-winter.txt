@@ -1,0 +1,86 @@
+# Author: redmushie (SS14/GitHub) / redmushroom (Discord)
+# Owner: redmushie (SS14/GitHub) / redmushroom (Discord)
+
+# NoAntag
+> self comp:ensure AntagImmune
+> self comp:ensure NoObjectiveTarget
+
+# Clothing
+> self spawn:in "jumpsuit" ClothingUniformJumpsuitCentcomAgent
+#> self spawn:in "outerClothing" ClothingOuterVestTank
+#> self spawn:in "neck" ClothingNeckScarfStripedOrange
+#> self spawn:in "head" ClothingHeadHatCentcomcap
+> self spawn:in "shoes" ClothingShoesBootsLaceup
+> self spawn:in "eyes" ClothingEyesGlassesCentCommPrescription => $glasses
+> ent $glasses vv:write "/ShowHealthBars/DamageContainers" "[Biological,Inorganic,Silicon,IPC]"
+> ent $glasses comp:ensure ShowAccessReaderSettings
+> self spawn:in "ears" ClothingHeadsetAltCentCom
+> self spawn:in "gloves" ClothingHandsGlovesHop comp:ensure Insulated
+# > self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
+# > self spawn:in "mask" "ClothingMask"
+> self spawn:in "id" CentcomPDA
+
+# Cane
+exec /items/cc-cane.txt
+> self container:insertentity "body_part_slot_left hand" $cane
+
+# Weapons
+exec /items/theodores-decelerator-pistol.txt
+> self container:insertentity "pocket1" $pistol
+
+exec /items/cc-folder.txt
+> self container:insertentity "pocket2" $folder
+
+# Stamp box
+exec /items/stamp-box.txt
+> self container:insertentity "belt" $stampBox
+
+# Bag
+> self spawn:in "back" ClothingBackpackSatchelCentcomm => $bag
+
+# Bag (cont.)
+> ent $bag spawn:in "storagebase" GavelBlock => $gavelBlock
+> ent $gavelBlock vv:write "/GavelBlock/Cooldown" "0"
+> ent $gavelBlock vv:write "/GavelBlock/MaxCounter" "9999999"
+> ent $bag spawn:in "storagebase" GavelHammer
+> ent $bag spawn:in "storagebase" GoldRing
+
+# Bag: Binary & Bluespace implanter
+> ent $bag spawn:in "storagebase" EncryptionKeyBinary
+> ent $bag spawn:in "storagebase" BluespaceImplanter
+> ent $bag spawn:in "storagebase" DoorRemoteCustom
+> ent $bag spawn:in "storagebase" Handcuffs
+
+# Bag: Locking flippo
+> ent $bag spawn:in "storagebase" CentCommFlippo => $flippo
+> ent $flippo vv:write "/Lock/AllowRepeatedLocking" "true"
+> ent $flippo vv:write "/Lock/AutoLock" "true"
+> ent $flippo vv:write "/Lock/AutoUnlock" "true"
+> ent $flippo vv:write "/Lock/MindShieldLock" "true"
+
+# Bag: Cigar case
+> ent $bag spawn:in "storagebase" CigarGoldCase => $cigarcase
+
+# Bag: Cigar case: Omni ciggies
+> ent $cigarcase container:getentities "storagebase" => $cigars
+> var $cigars vv:write "/MetaData/_entityName" "premium CentComm omnizine cigar"
+> var $cigars vv:write "/Smokable/InhaleAmount" "0.20"
+> var $cigars solution:get "smokable" solution:adjcapacity 10000 solution:adjreagent Nicotine -10 solution:adjreagent Omnizine 6000 solution:adjreagent Fiber 1000 solution:adjreagent Nutriment 1000 solution:adjreagent Water 1000 solution:adjreagent TranexamicAcid 1000
+
+# Name and job
+> self do "vvwrite /entity/$ID/Name \"CAD Intern 'Theodore Winter'\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Intern\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Theodore Winter\""
+
+# Disability
+> ent $self comp:ensure ImpairedMobility
+
+# Language
+> self language:add Universal true true
+
+# Implants
+> self comp:ensure Implanted
+#> self spawn:in "implant" "BluespaceImplant"
+> self spawn:in "implant" "MindShieldImplant"
+> self spawn:in "implant" "TrackingImplant"
+> self spawn:in "implant" "DeathRattleImplantCentcomm"

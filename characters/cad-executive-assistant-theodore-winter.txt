@@ -1,3 +1,6 @@
+# Author: redmushie (SS14/GitHub) / redmushroom (Discord)
+# Owner: NeotheChaosChicken (Discord)
+
 # NoAntag
 > self comp:ensure AntagImmune
 > self comp:ensure NoObjectiveTarget
@@ -12,7 +15,7 @@
 > ent $glasses vv:write "/ShowHealthBars/DamageContainers" "[Biological,Inorganic,Silicon,IPC]"
 > ent $glasses comp:ensure ShowAccessReaderSettings
 > self spawn:in "ears" ClothingHeadsetAltCentCom
-> self spawn:in "gloves" ClothingHandsGlovesHop comp:ensure Insulated
+> self spawn:in "gloves" ClothingHandsGlovesColorBlack comp:ensure Insulated
 # > self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
 # > self spawn:in "mask" "ClothingMask"
 > self spawn:in "id" CentcomPDA
@@ -21,28 +24,6 @@
 > ent $cane comp:ensure BatterySelfRecharger
 > ent $cane vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "8"
 
-# Weapons
-> self spawn:in "pocket1" WeaponPulsePistol => $pistol
-> ent $pistol vv:write "/BatteryWeaponFireModes/CurrentFireMode" "0"
-> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes" "[{proto: TaserBolt}, {proto: AntiParticlesProjectile}, {proto: DestroyBeam}]"
-> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[0]" "{proto: TaserBolt, fireCost: 215, pacifismAllowedMode: true, magState: stun, visualState: stun}"
-> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[1]" "{proto: DestroyBeam, fireCost: 215, magState: destroy, visualState: destroy}"
-> ent $pistol vv:write "/BatteryWeaponFireModes/FireModes[2]" "{proto: AntiParticlesProjectile, fireCost: 260, magState: kill, visualState: kill}"
-> ent $pistol vv:write "/GunFireModeSounds/Sounds[0]" "{ path: /Audio/Weapons/Guns/Gunshots/taser.ogg }"
-> ent $pistol vv:write "/GunFireModeSounds/Sounds[1]" "{ path: /Audio/Weapons/Guns/Gunshots/laser3.ogg }"
-> ent $pistol vv:write "/GunFireModeSounds/Sounds[2]" "{ path: /Audio/Weapons/emitter.ogg, params: { pitch: 2 }}"
-> ent $pistol vv:write "/Gun/FireRate" "2"
-> ent $pistol vv:write "/Gun/FireRateModified" "2"
-# > ent $pistol vv:write "/Battery/MaxCharge" "1600" # does not work
-> ent $pistol comp:ensure BatterySelfRecharger
-> ent $pistol vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "120"
-> ent $pistol comp:ensure Lock
-> ent $pistol vv:write "/Lock/AllowRepeatedLocking" "true"
-> ent $pistol vv:write "/Lock/AutoLock" "true"
-> ent $pistol vv:write "/Lock/AutoUnlock" "true"
-> ent $pistol vv:write "/Lock/MindShieldLock" "true"
-> ent $pistol vv:write "/MetaData/_entityName" "decelerator pistol"
-> ent $pistol vv:write "/MetaData/_entityDescription" "A finely crafted high-tech pistol equipped with a microreactor designed to let the wielder decelerate singularities with ease."
 
 > self spawn:in "pocket2" BoxFolderCentComEmpty => $folder
 > val EntityUid $folder box2iconstructor:new box2iconstructor:add 0 0 5 8 storage:reshape
@@ -113,26 +94,14 @@
 > val EntityUid $skillIssueStamp vv:write "/MetaData/_entityName" "SKILL ISSUE rubber stamp"
 > val EntityUid $skillIssueStamp vv:write "/Stamp/StampedName" "SKILL ISSUE"
 
-# Stamps: Row 6
-
-> ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $nepotismStamp
-> val EntityUid $nepotismStamp vv:write "/MetaData/_entityName" "NEPOTISM rubber stamp"
-> val EntityUid $nepotismStamp vv:write "/Stamp/StampedName" "Nepotism"
-
-> i 1 to 3 map { do "ent $stampBox spawn:in \"storagebase\" Paper" }
+#> ent $stampBox spawn:in "storagebase" Paper
+#> ent $stampBox spawn:in "storagebase" Paper
 
 # Bag (cont.)
 > ent $bag spawn:in "storagebase" GavelBlock => $gavelBlock
 > ent $gavelBlock vv:write "/GavelBlock/Cooldown" "0"
 > ent $gavelBlock vv:write "/GavelBlock/MaxCounter" "9999999"
 > ent $bag spawn:in "storagebase" GavelHammer
-> ent $bag spawn:in "storagebase" GoldRing
-
-# Bag: Binary & Bluespace implanter
-> ent $bag spawn:in "storagebase" EncryptionKeyBinary
-> ent $bag spawn:in "storagebase" BluespaceImplanter
-> ent $bag spawn:in "storagebase" DoorRemoteCustom
-> ent $bag spawn:in "storagebase" Handcuffs
 
 # Bag: Locking flippo
 > ent $bag spawn:in "storagebase" CentCommFlippo => $flippo
@@ -151,8 +120,8 @@
 > var $cigars solution:get "smokable" solution:adjcapacity 10000 solution:adjreagent Nicotine -10 solution:adjreagent Omnizine 6000 solution:adjreagent Fiber 1000 solution:adjreagent Nutriment 1000 solution:adjreagent Water 1000 solution:adjreagent TranexamicAcid 1000
 
 # Name and job
-> self do "vvwrite /entity/$ID/Name \"CAD Intern 'Theodore Winter'\""
-> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Intern\""
+> self do "vvwrite /entity/$ID/Name \"CAD Executive Assistant 'Theodore Winter'\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Executive Assistant\""
 > self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Theodore Winter\""
 
 # Disability

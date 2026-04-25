@@ -1,0 +1,6 @@
+# Author: redmushie
+# Owner: redmushie
+# Free to use
+
+> self spawn:on BoxFolderCentComEmpty => $folder
+> val EntityUid $folder box2iconstructor:new box2iconstructor:add 0 0 5 8 storage:reshape

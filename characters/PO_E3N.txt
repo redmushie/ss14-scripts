@@ -1,3 +1,7 @@
+# Author: BornStellar (SS14/Discord) / Lukeb28 (GitHub)
+# Owner: BornStellar (SS14/Discord) / Lukeb28 (GitHub)
+# As I am not the author, please ask him for permission in case you want to copy stuff semi-verbatim.
+
 # PO Ethan Loadout
 
 # Mindshield

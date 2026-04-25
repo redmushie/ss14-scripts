@@ -1,59 +1,15 @@
-# Mindshield
-> self comp:ensure AntagImmune comp:ensure NoObjectiveTarget
-
-# Implants
-> self comp:ensure Implanted
-> self spawn:in "implant" "MindShieldImplant"
-> self spawn:in "implant" "TrackingImplant"
-> self spawn:in "implant" "DeathRattleImplantCentcomm"
-
-# Clothing
-> self spawn:in "jumpsuit" ClothingUniformJumpskirtCentcommDomesticFormalWear
-> self spawn:in "outerClothing" ClothingOuterCoatExpensiveOpened
-> self spawn:in "head" ClothingHeadHatCentcom
-> self spawn:in "shoes" ClothingShoesBootsMagBlinding
-> self spawn:in "eyes" ClothingEyesHudCentComm => $glasses
-> ent $glasses vv:write "/ShowHealthBars/DamageContainers" "[Biological,Inorganic,Silicon,IPC]"
-> ent $glasses comp:ensure ShowAccessReaderSettings
-> self spawn:in "ears" ClothingHeadsetAltCentCom
-> self spawn:in "gloves" ClothingHandsTacticalMaidGloves
-> self spawn:in "misc" ClothingNeckGoldmedal
-> self spawn:in "id" CentcomPDA
-
-# Weapons
-> self spawn:in "belt" CentcommVibrobladeSheath do "ent $ID spawn:in \"item\" CentcommVibroblade"
-> self spawn:in "pocket1" WeaponRevolverMateba
-> self spawn:in "pocket2" FlashlightLantern
-
-# Bag
-> self spawn:in "back" ClothingBackpackSatchelHolding => $bag
-
-# Bag: Micros
-> ent $bag spawn:in "storagebase" "PowerCellMicroreactor"
-> ent $bag spawn:in "storagebase" "PowerCellMicroreactor"
-
-# Bag: Paperwork folder (big)
-> ent $bag spawn:in "storagebase" BoxFolderCentComEmpty => $folder
-> val EntityUid $folder box2iconstructor:new box2iconstructor:add 0 0 5 5 storage:reshape
-
-# Bag: Box of hugs
-> ent $bag spawn:in "storagebase" "BoxHug"
-
-# Bag: Combat
-> ent $bag spawn:in "storagebase" "MedkitCombatFilled"
-> ent $bag spawn:in "storagebase" "SpeedLoaderMagnumFMJ"
-
-# Bag: Implanters
-> ent $bag spawn:in "storagebase" "BluespaceImplanter"
+# Author: redmushie
+# Owner: redmushie
+# Free to use
 
 # Stamp box
-> ent $bag spawn:in "storagebase" BoxStamps => $stampBox
+> self spawn:on BoxStamps => $stampBox
 > ent $stampBox box2iconstructor:new box2iconstructor:add 0 0 3 6 storage:reshape
 > ent $stampBox comp:ensure Clothing
 > ent $stampBox vv:write "/Clothing/Slots" "[Belt]"
 
 # Stamps: Row 1
-> ent $stampBox spawn:in "storagebase" RubberStampCDD
+> ent $stampBox spawn:in "storagebase" RubberStampCAD
 > ent $stampBox spawn:in "storagebase" RubberStampCentcom
 > ent $stampBox spawn:in "storagebase" RubberStampApproved
 > ent $stampBox spawn:in "storagebase" RubberStampDenied
@@ -107,19 +63,8 @@
 > val EntityUid $skillIssueStamp vv:write "/MetaData/_entityName" "SKILL ISSUE rubber stamp"
 > val EntityUid $skillIssueStamp vv:write "/Stamp/StampedName" "SKILL ISSUE"
 
-# Bag: Box-O-Gluttony
-> val EntityUid $bag spawn:in "storagebase" MonkeyCubeBox => $cookieBox
-> ent $cookieBox container:get "storagebase" container:dropandget delete
-> ent $cookieBox vv:write "/MetaData/_entityName" "Box-O-Gluttony"
-> ent $cookieBox vv:write "/MetaData/_entityDescription" "Emergency gluttony kit: Break glass to open. Do not eat the glass."
-> val EntityUid $cookieBox box2iconstructor:new box2iconstructor:add 0 0 8 2 storage:reshape
+# Stamps: Row 6
 
-# Box-O-Gluttony: Cotton cake slices
-> i 1 to 9 map { do "ent $cookieBox spawn:in \"storagebase\" FoodCakeCottonSlice" }
-> i 1 to 9 map { do "ent $cookieBox spawn:in \"storagebase\" FoodPieMeatSlice" }
-> i 1 to 9 map { do "ent $cookieBox spawn:in \"storagebase\" FoodBakedCookieRaisin" }
-
-# Name and job
-> self do "vvwrite /entity/$ID/Name \"CDD Liaison Officer 'Muse'\""
-> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CDD Liaison Officer\""
-> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Muse\""
+> ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $nepotismStamp
+> val EntityUid $nepotismStamp vv:write "/MetaData/_entityName" "NEPOTISM rubber stamp"
+> val EntityUid $nepotismStamp vv:write "/Stamp/StampedName" "Nepotism"

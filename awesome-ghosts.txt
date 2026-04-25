@@ -1,1 +1,1 @@
-> entities prototyped MobObserver where { comp:has Actor } vv:write "/MovementSpeedModifier/BaseSprintSpeed" "20" vv:write "/MovementSpeedModifier/BaseWalkSpeed" "10" comp:ensure ShowHealthBars comp:ensure ShowJobIcons comp:ensure Speech
+> entities prototyped MobObserver where { comp:has Actor } vv:write "/MovementSpeedModifier/BaseSprintSpeed" "20" vv:write "/MovementSpeedModifier/BaseWalkSpeed" "10" comp:ensure Speech
