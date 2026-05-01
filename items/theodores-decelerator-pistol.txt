@@ -19,7 +19,7 @@
 
 # Recharging
 > ent $pistol comp:ensure BatterySelfRecharger
-> ent $pistol vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "120"
+> ent $pistol vv:write "/BatterySelfRecharger/AutoRechargeRateVV" "90"
 
 # Note: These Lock parameters don't sync. It'll still work, you just won't hear it yourself.
 #       Oddly enough, everyone else *will* hear it lock/unlock.

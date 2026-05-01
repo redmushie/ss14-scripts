@@ -1,0 +1,49 @@
+[head=1][color=#009100]────────────────────[/color][/head]
+[color=#1155cc]█▀▀ █▀▀█ █▀▀▄[/color]   [color=#1155cc][bold]CENTRAL ADMINISTRATION DIVISION[/bold][/color]
+[color=#1155cc]█░░ █▄▄█ █░░█[/color]   [color=#1155cc][bolditalic]The grease and blood of Bureaucracy[/bolditalic][/color]
+[color=#1155cc]▀▀▀ ▀░░▀ ▀▀▀░[/color]   [color=#aaaaaa][italic]OFFICIAL CAD OFFICE DOCUMENT[/italic][/color]
+[head=1][color=#009100]────────────────────[/color][/head]
+
+[head=2]Command Debrief Evaluation[/head]
+
+Subject of evaluation: [form]
+Composed by: [form]
+
+
+[head=3]Performance[/head]
+[italic]How well the employee fulfilled their role.[/italic]
+[head=1][color=#1155cc]───────────────[/color][/head]
+  [color=#440000][check] [bold]Criminal neglect[/bold][/color]
+  [color=#440000][check] [bold]Criminal incompetence[/bold][/color]
+  [color=#aa0000][check] Unacceptable[/color]
+  [color=#aa0000][check] Subpar[/color]
+  [check] Acceptable
+  [color=#00aa00][check] Good[/color]
+  [color=#00aa00][check] Excellent[/color]
+  [color=#00aa00][check] [bold]Outstanding[/bold][/color]
+
+
+[head=3]Results[/head]
+[italic]Good or bad, you reap what you sow.[/italic]
+[head=1][color=#1155cc]───────────────[/color][/head]
+
+Notes: [form]
+
+- [color=#00aa00][check][bold] Recommendation for position:[/bold][/color] [form]
+- [color=#00aa00][check] Positive note on employment record[/color]
+- [check] No abnormalities
+- [check] Informative note on employment record
+- [check] Pay adjustment for [form] shift(s): [color=#aa0000]
+[mono]    [/mono][check][mono]-100%  [/mono][check][mono]-80%   [/mono][check][mono]-75%   [/mono][check][mono]-50%[/mono]
+[mono]    [/mono][check][mono]-30%   [/mono][check][mono]-25%   [/mono][check][mono]-20%   [/mono][check][mono]-10%[/mono][/color][color=#00aa00]
+[mono]    [/mono][check][mono]+10%   [/mono][check][mono]+20%   [/mono][check][mono]+30%   [/mono][check][mono]+50%[/mono]
+[mono]    [/mono][check][mono]+75%   [/mono][check][mono]+100%  [/mono][check][mono]+150%  [/mono][check][mono]+200%[/mono][/color]
+- [check] [color=#aa0000]Negative note on employment record[/color]
+- [check] [color=#aa0000]Punitive reassignment to [/color][form][color=#aa0000] for [form] shift(s)[/color]
+- [check] [color=#aa0000]Demotion to: [form][/color]
+- [check] [color=#aa0000][bold]Contract termination[/bold][/color]
+- [check] [color=#440000][bold]Legal prosecution[/bold][/color]
+
+
+[head=1][color=#009100]────────────────────[/color][/head]
+⠀                      [italic]Place for Stamps and/or Signatures[/italic]
