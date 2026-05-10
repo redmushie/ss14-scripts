@@ -1,0 +1,65 @@
+# Author: redmushie (SS14/GitHub) / redmushroom (Discord)
+# Owner: monotonemuses/EsperSpooks (Discord)
+
+# NoAntag
+> self comp:ensure AntagImmune
+> self comp:ensure NoObjectiveTarget
+
+# Clothing
+> self spawn:in "jumpsuit" ClothingUniformJumpsuitCentcomAgent
+#> self spawn:in "outerClothing" ClothingOuterVestTank
+> self spawn:in "neck" ClothingNeckScarfStripedCentcom
+#> self spawn:in "head" ClothingHeadHatCentcomcap
+> self spawn:in "shoes" ClothingShoesBootsLaceup
+> self spawn:in "eyes" ClothingEyesGlassesCentComm
+> self spawn:in "ears" ClothingHeadsetCentCom
+> self spawn:in "gloves" ClothingHandsGlovesHop comp:ensure Insulated
+# > self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
+# > self spawn:in "mask" "ClothingMask"
+> self spawn:in "id" CentcomPDA
+
+# Pocket 1: Pulse pistol
+> self spawn:in "pocket1" WeaponPulsePistol
+
+# Pocket 2: Big folder
+exec /items/cc-folder.txt
+> self container:insertentity "pocket2" $folder
+
+# Belt: Stamp box
+exec /items/stamp-box.txt
+> self container:insertentity "belt" $stampBox
+
+# Bag
+> self spawn:in "back" ClothingBackpackSatchelCentcomm => $bag
+
+# Bag: Gavel & block
+> ent $bag spawn:in "storagebase" GavelBlock => $gavelBlock
+> ent $gavelBlock vv:write "/GavelBlock/Cooldown" "0"
+> ent $gavelBlock vv:write "/GavelBlock/MaxCounter" "9999999"
+> ent $bag spawn:in "storagebase" GavelHammer
+
+# Bag: Utility
+> ent $bag spawn:in "storagebase" BluespaceImplanter
+> ent $bag spawn:in "storagebase" DoorRemoteCustom
+
+# Bag: Bluespace coffee
+> ent $bag spawn:in "storagebase" DrinkHotCoffee => $coffeeMug
+> val EntityUid $coffeeMug solution:get "drink" => $coffee
+> val SolutionRef $coffee solution:adjcapacity 10000 solution:adjreagent Coffee 7980 solution:adjreagent Nutriment 2000
+> var $coffeeMug comp:rm Spillable
+> var $coffeeMug comp:rm Destructible
+> var $coffeeMug vv:write "/MetaData/_entityName" "monotonous coffee"
+
+# Name and job
+> self do "vvwrite /entity/$ID/Name \"CAD Intern 'Monotony'\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Intern\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Monotony\""
+
+# Language
+> self language:add Universal true true
+
+# Implants
+> self comp:ensure Implanted
+> self spawn:in "implant" "MindShieldImplant"
+> self spawn:in "implant" "TrackingImplant"
+> self spawn:in "implant" "DeathRattleImplantCentcomm"
