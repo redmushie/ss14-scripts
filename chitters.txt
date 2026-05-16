@@ -1,0 +1,17 @@
+> self comp:ensure Speech
+> self comp:ensure BodyEmotes
+> self comp:ensure Emoting
+> self comp:ensure MothAccent
+> self comp:ensure Vocal
+
+> self vv:write "/Ghost/BypassGhostChat" "true"
+> self vv:write "/BodyEmotes/SoundsId" "MothBodyEmotes"
+> self vv:write "/Speech/AllowedEmotes" "[Chitter,Squeak,FlapWings]"
+
+> self vv:write "/Speech/SpeechSounds" "UnisexMoth"
+> self vv:write "/Speech/SpeechVerb" "Moth"
+> self vv:write "/Body/Prototype" "Moth"
+
+> self vv:write "/TypingIndicator/TypingIndicatorPrototype" "moth"
+> self vv:write "/Vocal/EmoteSounds" "UnisexMoth"
+> self vv:write "/Vocal/EmoteCooldown" "0"

@@ -4,31 +4,50 @@
 
 # Stamp box
 > self spawn:on BoxStamps => $stampBox
-> ent $stampBox box2iconstructor:new box2iconstructor:add 0 0 3 6 storage:reshape
+> ent $stampBox box2iconstructor:new box2iconstructor:add 0 0 3 1 box2iconstructor:add 5 0 6 1 box2iconstructor:add 0 3 3 3 box2iconstructor:add 0 4 2 4 box2iconstructor:add 5 3 6 4 box2iconstructor:add 0 6 4 6 box2iconstructor:add 0 8 3 11 storage:reshape
 > ent $stampBox comp:ensure Clothing
 > ent $stampBox vv:write "/Clothing/Slots" "[Belt]"
 
-# Stamps: Row 1
+# Row 1
 > ent $stampBox spawn:in "storagebase" RubberStampCAD
 > ent $stampBox spawn:in "storagebase" RubberStampCentcom
 > ent $stampBox spawn:in "storagebase" RubberStampApproved
 > ent $stampBox spawn:in "storagebase" RubberStampDenied
 
-# Stamps: Row 2
+# Square 1, part 1/2
 > ent $stampBox spawn:in "storagebase" RubberStampMissingStamps
 > ent $stampBox spawn:in "storagebase" RubberStampIncorrectStamps
-> ent $stampBox spawn:in "storagebase" RubberStampIncorrectForm
-> ent $stampBox spawn:in "storagebase" RubberStampIncompleteForm => $incorrectlyFilledOutStamp
-> val EntityUid $incorrectlyFilledOutStamp vv:write "/MetaData/_entityName" "INCORRECTLY FILLED OUT rubber stamp"
-> val EntityUid $incorrectlyFilledOutStamp vv:write "/Stamp/StampedName" "Incorrectly Filled Out"
 
-# Stamps: Row 3
+# Row 2
 > ent $stampBox spawn:in "storagebase" RubberStampAcknowledged
 > ent $stampBox spawn:in "storagebase" RubberStampStandby
 > ent $stampBox spawn:in "storagebase" RubberStampSentToATS
 > ent $stampBox spawn:in "storagebase" RubberStampDeferToCommand
 
-# Stamps: Row 4
+# Square 1, part 2/2
+> ent $stampBox spawn:in "storagebase" RubberStampIncorrectForm
+> ent $stampBox spawn:in "storagebase" RubberStampIncompleteForm => $incorrectlyFilledOutStamp
+> val EntityUid $incorrectlyFilledOutStamp vv:write "/MetaData/_entityName" "INCORRECTLY FILLED OUT rubber stamp"
+> val EntityUid $incorrectlyFilledOutStamp vv:write "/Stamp/StampedName" "Incorrectly Filled Out"
+
+# Row 3
+> ent $stampBox spawn:in "storagebase" RubberStampApproved => $goodWorkStamp
+> val EntityUid $goodWorkStamp vv:write "/MetaData/_entityName" "GOOD WORK rubber stamp"
+> val EntityUid $goodWorkStamp vv:write "/Stamp/StampedName" "Good work"
+
+> ent $stampBox spawn:in "storagebase" RubberStampApproved => $keepItUpStamp
+> val EntityUid $keepItUpStamp vv:write "/MetaData/_entityName" "KEEP IT UP rubber stamp"
+> val EntityUid $keepItUpStamp vv:write "/Stamp/StampedName" "Keep it up"
+
+> ent $stampBox spawn:in "storagebase" RubberStampStandby => $doNotLetItHappenAgainStamp
+> val EntityUid $doNotLetItHappenAgainStamp vv:write "/MetaData/_entityName" "DON'T LET IT HAPPEN AGAIN rubber stamp"
+> val EntityUid $doNotLetItHappenAgainStamp vv:write "/Stamp/StampedName" "Don't let it happen again"
+
+> ent $stampBox spawn:in "storagebase" RubberStampDenied => $disappointingStamp
+> val EntityUid $disappointingStamp vv:write "/MetaData/_entityName" "DISAPPOINTING rubber stamp"
+> val EntityUid $disappointingStamp vv:write "/Stamp/StampedName" "DISAPPOINTING"
+
+# Square 2, part 1/2
 > ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $missingSignatureStamp
 > val EntityUid $missingSignatureStamp vv:write "/MetaData/_entityName" "MISSING SIGNATURE rubber stamp"
 > val EntityUid $missingSignatureStamp vv:write "/Stamp/StampedName" "Missing Signature"
@@ -37,15 +56,57 @@
 > val EntityUid $incorrectSignatureStamp vv:write "/MetaData/_entityName" "INCORRECT SIGNATURE rubber stamp"
 > val EntityUid $incorrectSignatureStamp vv:write "/Stamp/StampedName" "Incorrect Signature"
 
-> ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $incorrectDateStamp
+# Row 4
+#> i 1 to 4 do "ent $stampBox spawn:in \"storagebase\" Paper"
+
+> ent $stampBox spawn:in "storagebase" RubberStampAcknowledged => $keepUsPostedStamp
+> val EntityUid $keepUsPostedStamp vv:write "/MetaData/_entityName" "KEEP US POSTED rubber stamp"
+> val EntityUid $keepUsPostedStamp vv:write "/Stamp/StampedName" "Keep us posted"
+
+> ent $stampBox spawn:in "storagebase" RubberStampApproved => $affirmativeStamp
+> val EntityUid $affirmativeStamp vv:write "/MetaData/_entityName" "AFFIRMATIVE rubber stamp"
+> val EntityUid $affirmativeStamp vv:write "/Stamp/StampedName" "AFFIRMATIVE"
+
+> ent $stampBox spawn:in "storagebase" RubberStampDenied => $negativeStamp
+> val EntityUid $negativeStamp vv:write "/MetaData/_entityName" "NEGATIVE rubber stamp"
+> val EntityUid $negativeStamp vv:write "/Stamp/StampedName" "NEGATIVE"
+
+# Square 2, part 2/2
+> ent $stampBox spawn:in "storagebase" RubberStampIncorrectForm => $incorrectDateStamp
 > val EntityUid $incorrectDateStamp vv:write "/MetaData/_entityName" "INCORRECT DATE rubber stamp"
 > val EntityUid $incorrectDateStamp vv:write "/Stamp/StampedName" "Incorrect Date"
 
-> ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $incorrectTimeStamp
+> ent $stampBox spawn:in "storagebase" RubberStampIncorrectForm => $incorrectTimeStamp
 > val EntityUid $incorrectTimeStamp vv:write "/MetaData/_entityName" "INCORRECT TIME rubber stamp"
 > val EntityUid $incorrectTimeStamp vv:write "/Stamp/StampedName" "Incorrect Time"
 
-# Stamps: Row 5
+# Row 5?
+
+> ent $stampBox spawn:in "storagebase" RubberStampApproved => $excellentPerformanceStamp
+> val EntityUid $excellentPerformanceStamp vv:write "/MetaData/_entityName" "EXCELLENT PERFORMANCE rubber stamp"
+> val EntityUid $excellentPerformanceStamp vv:write "/Stamp/StampedName" "Excellent performance"
+
+> ent $stampBox spawn:in "storagebase" RubberStampAcknowledged => $acceptablePerformanceStamp
+> val EntityUid $acceptablePerformanceStamp vv:write "/MetaData/_entityName" "ACCEPTABLE PERFORMANCE rubber stamp"
+> val EntityUid $acceptablePerformanceStamp vv:write "/Stamp/StampedName" "Acceptable performance"
+
+> ent $stampBox spawn:in "storagebase" RubberStampStandby => $mediocrePerformanceStamp
+> val EntityUid $mediocrePerformanceStamp vv:write "/MetaData/_entityName" "MEDIOCRE PERFORMANCE rubber stamp"
+> val EntityUid $mediocrePerformanceStamp vv:write "/Stamp/StampedName" "Mediocre performance"
+
+> ent $stampBox spawn:in "storagebase" RubberStampIncompleteForm => $subparPerformanceStamp
+> val EntityUid $subparPerformanceStamp vv:write "/MetaData/_entityName" "SUBPAR PERFORMANCE rubber stamp"
+> val EntityUid $subparPerformanceStamp vv:write "/Stamp/StampedName" "Subpar performance"
+
+> ent $stampBox spawn:in "storagebase" RubberStampDenied => $disappointingPerformanceStamp
+> val EntityUid $disappointingPerformanceStamp vv:write "/MetaData/_entityName" "DISAPPOINTING PERFORMANCE rubber stamp"
+> val EntityUid $disappointingPerformanceStamp vv:write "/Stamp/StampedName" "Disappointing performance"
+
+
+# Keep us updated stamp?
+
+# Stamps: Row 7
+
 > ent $stampBox spawn:in "storagebase" RubberStampIncorrectForm => $tryAgainStamp
 > val EntityUid $tryAgainStamp vv:write "/MetaData/_entityName" "TRY AGAIN rubber stamp"
 > val EntityUid $tryAgainStamp vv:write "/Stamp/StampedName" "TRY AGAIN"
@@ -63,7 +124,7 @@
 > val EntityUid $skillIssueStamp vv:write "/MetaData/_entityName" "SKILL ISSUE rubber stamp"
 > val EntityUid $skillIssueStamp vv:write "/Stamp/StampedName" "SKILL ISSUE"
 
-# Stamps: Row 6
+# Stamps: Row 8
 
 > ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $nepotismStamp
 > val EntityUid $nepotismStamp vv:write "/MetaData/_entityName" "NEPOTISM rubber stamp"
