@@ -1,0 +1,1 @@
+> entities where { comp:has PreventEorg } comp:rm Pacified comp:rm PreventEorg
