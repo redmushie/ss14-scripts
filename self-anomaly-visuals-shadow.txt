@@ -1,4 +1,4 @@
-> marked comp:ensure InnerBodyAnomaly
-> marked vv:write "/InnerBodyAnomaly/InjectionProto" "AnomalyInjectionShadow"
-> marked vv:write "/InnerBodyAnomaly/FallbackSprite" "{sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow}"
-> marked vv:write "/InnerBodyAnomaly/SpeciesSprites" "{Vox: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_VOX}, Arachnid: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_ARACHNID}, Moth: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_MOTH}}"
+> self comp:ensure InnerBodyAnomaly
+> self vv:write "/InnerBodyAnomaly/InjectionProto" "AnomalyInjectionShadow"
+> self vv:write "/InnerBodyAnomaly/FallbackSprite" "{sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow}"
+> self vv:write "/InnerBodyAnomaly/SpeciesSprites" "{Vox: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_VOX}, Arachnid: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_ARACHNID}, Moth: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shadow_MOTH}}"
