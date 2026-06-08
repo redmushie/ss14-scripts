@@ -49,6 +49,12 @@ binds:
 - mod1: Shift
   key: G
   function: SmartEquipSuitStorage
+- mod1: Control
+  key: Minus
+  function: ZoomOut
+- mod1: Control
+  key: Equal
+  function: ZoomIn
 leaveEmpty:
 - CycleChatChannelForward
 - CycleChatChannelBackward
