@@ -1,0 +1,4 @@
+> marked comp:ensure InnerBodyAnomaly
+> marked vv:write "/InnerBodyAnomaly/InjectionProto" "AnomalyInjectionPyroclastic"
+> marked vv:write "/InnerBodyAnomaly/FallbackSprite" "{sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: fire}"
+> marked vv:write "/InnerBodyAnomaly/SpeciesSprites" "{Vox: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: fire_VOX}, Arachnid: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: fire_ARACHNID}, Moth: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: fire_MOTH}}"

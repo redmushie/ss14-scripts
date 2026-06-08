@@ -1,0 +1,4 @@
+> self comp:ensure InnerBodyAnomaly
+> self vv:write "/InnerBodyAnomaly/InjectionProto" "AnomalyInjectionElectric"
+> self vv:write "/InnerBodyAnomaly/FallbackSprite" "{sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shock}"
+> self vv:write "/InnerBodyAnomaly/SpeciesSprites" "{Vox: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shock_VOX}, Arachnid: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shock_ARACHNID}, Moth: {sprite: Structures/Specific/Anomalies/inner_anom_layer.rsi, state: shock_MOTH}}"
