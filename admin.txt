@@ -2,11 +2,12 @@
 > self inventory:getnamed "belt" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
 > self inventory:getnamed "id" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
 > self inventory:getnamed "back" vv:write "Clothing/ClothingVisuals""{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
-> self vv:write "/MetaData/_entityName" "Red Mushie"
-> self vv:write "/MetaData/_entityDescription" ""
+#> self vv:write "/MetaData/_entityName" "Red Mushie"
+#> self vv:write "/MetaData/_entityDescription" ""
 > self vv:write "/MovementSpeedModifier/BaseSprintSpeed" "20"
 > self vv:write "/MovementSpeedModifier/BaseWalkSpeed" "10"
-> self comp:ensure ShowHealthBars
-> ent $self scale:set [1.5,1.5]
+> ent $self scale:set [1,1]
 #> ent $self comp:ensure KillSign vv:write "KillSign/Sprite/RsiPath" "_Starlight/Objects/Misc/killsign.rsi" vv:write "KillSign/Sprite/RsiState" "moff"
 > self container:getentities "actions" prototyped ActionGhostBoo vv:write "/Action/UseDelay" "0"
+> self comp:ensure Speech
+> self comp:rm Stealth

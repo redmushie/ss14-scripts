@@ -7,9 +7,6 @@
 > self vv:write "/MovementSpeedModifier/BaseSprintSpeed" "12"
 > self vv:write "/MovementSpeedModifier/BaseWalkSpeed" "8"
 > self where { comp:has RgbLightController } comp:rm RgbLightController
-> self comp:ensure ShowCriminalRecordIcons
-> self comp:ensure ShowJobIcons
-> self comp:ensure ShowMindShieldIcons
-> self comp:ensure ShowSyndicateIcons
-> self comp:ensure ShowHealthBars
 > self scale:set [0.01,0.01]
+> self comp:ensure Stealth
+> self vv:write "/Stealth/LastVisibility" "-1"

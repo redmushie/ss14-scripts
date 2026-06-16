@@ -4,9 +4,15 @@
 
 # Stamp box
 > self spawn:on BoxStamps => $stampBox
-> ent $stampBox box2iconstructor:new box2iconstructor:add 0 0 3 1 box2iconstructor:add 5 0 6 1 box2iconstructor:add 0 3 3 3 box2iconstructor:add 0 4 2 4 box2iconstructor:add 5 3 6 4 box2iconstructor:add 0 6 4 6 box2iconstructor:add 0 8 3 11 storage:reshape
+> ent $stampBox box2iconstructor:new box2iconstructor:add 0 0 3 1 box2iconstructor:add 5 0 6 1 box2iconstructor:add 0 3 3 3 box2iconstructor:add 0 4 2 4 box2iconstructor:add 5 3 6 4 box2iconstructor:add 0 6 4 6 box2iconstructor:add 0 8 7 9 storage:reshape
 > ent $stampBox comp:ensure Clothing
 > ent $stampBox vv:write "/Clothing/Slots" "[Belt]"
+
+# ideas:
+# - "dont send us this""
+# - "concerning"
+# - "what the f***"
+# - "figure it out"
 
 # Row 1
 > ent $stampBox spawn:in "storagebase" RubberStampCAD
@@ -129,3 +135,7 @@
 > ent $stampBox spawn:in "storagebase" RubberStampMissingStamps => $nepotismStamp
 > val EntityUid $nepotismStamp vv:write "/MetaData/_entityName" "NEPOTISM rubber stamp"
 > val EntityUid $nepotismStamp vv:write "/Stamp/StampedName" "Nepotism"
+
+> ent $stampBox spawn:in "storagebase" RubberStampCID => $atYourRiskStamp
+> val EntityUid $atYourRiskStamp vv:write "/MetaData/_entityName" "AT YOUR OWN RISK rubber stamp"
+> val EntityUid $atYourRiskStamp vv:write "/Stamp/StampedName" "We're going to let you do it, but if it goes wrong, that's entirely on you"

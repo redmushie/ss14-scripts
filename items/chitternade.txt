@@ -1,0 +1,13 @@
+> self spawn:on PlushieMoth => $chitternade
+> ent $chitternade comp:ensure ScatteringGrenade
+> ent $chitternade comp:ensure TimerTrigger
+> ent $chitternade comp:ensure TriggerOnUse
+> ent $chitternade vv:write "/ScatteringGrenade/FillPrototype" "PlushieMoth"
+> ent $chitternade vv:write "/ScatteringGrenade/Count" "12"
+> ent $chitternade vv:write "/ScatteringGrenade/UnspawnedCount" "12"
+> ent $chitternade vv:write "/TimerTrigger/Delay" "5"
+> ent $chitternade vv:write "/TimerTrigger/BeepSound" "{ path: /Audio/Voice/Moth/moth_squeak.ogg }"
+> ent $chitternade vv:write "/EmitSoundOnTrigger/Sound" "{ path: /Audio/Voice/Moth/moth_scream.ogg }"
+> ent $chitternade comp:rm EmitSoundOnUse vv:write "/ScatteringGrenade/Velocity" "20"
+> ent $chitternade vv:write "/MetaData/_entityName" "chitternade"
+> ent $chitternade vv:write "/MetaData/_entityDescription" "It's a grenade that chitters."

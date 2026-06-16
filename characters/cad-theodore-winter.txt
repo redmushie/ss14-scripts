@@ -46,10 +46,8 @@ exec /items/stamp-box.txt
 > ent $bag spawn:in "storagebase" GoldRing
 
 # Bag: Binary & Bluespace implanter
-> ent $bag spawn:in "storagebase" EncryptionKeyBinary
 > ent $bag spawn:in "storagebase" BluespaceImplanter
 > ent $bag spawn:in "storagebase" DoorRemoteCustom
-> ent $bag spawn:in "storagebase" Handcuffs
 
 # Bag: Locking flippo
 > ent $bag spawn:in "storagebase" CentCommFlippo => $flippo
@@ -68,8 +66,8 @@ exec /items/stamp-box.txt
 > var $cigars solution:get "smokable" solution:adjcapacity 10000 solution:adjreagent Nicotine -10 solution:adjreagent Omnizine 6000 solution:adjreagent Fiber 1000 solution:adjreagent Nutriment 1000 solution:adjreagent Water 1000 solution:adjreagent TranexamicAcid 1000
 
 # Name and job
-> self do "vvwrite /entity/$ID/Name \"CAD Intern 'Theodore Winter'\""
-> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Intern\""
+> self do "vvwrite /entity/$ID/Name \"CAD Executive Assistant 'Theodore Winter'\""
+> self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/_jobTitle \"CAD Executive Assistant\""
 > self do "vvwrite /entity/$ID/ContainerContainer/Containers[id]/ContainedEntity/Pda/ContainedId/IdCard/FullName \"Theodore Winter\""
 
 # Disability
