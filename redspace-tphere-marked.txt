@@ -1,0 +1,2 @@
+> self spawn:on AdminInstantEffectRedspace
+> marked tp:to $self

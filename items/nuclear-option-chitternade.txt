@@ -1,0 +1,11 @@
+> self spawn:on NuclearGrenade => $chitternade
+> ent $chitternade comp:rm ExplodeOnTrigger
+> ent $chitternade comp:rm Explosive
+> ent $chitternade comp:ensure ScatteringGrenade
+> ent $chitternade comp:ensure TimerTrigger
+> ent $chitternade comp:ensure TriggerOnUse
+> ent $chitternade vv:write "/ScatteringGrenade/FillPrototype" "PlushieMoth"
+> ent $chitternade vv:write "/ScatteringGrenade/Count" "12"
+> ent $chitternade vv:write "/ScatteringGrenade/UnspawnedCount" "12"
+> ent $chitternade vv:write "/EmitSoundOnTrigger/Sound" "{ path: /Audio/Voice/Moth/moth_scream.ogg }"
+> ent $chitternade comp:rm EmitSoundOnUse vv:write "/ScatteringGrenade/Velocity" "20"

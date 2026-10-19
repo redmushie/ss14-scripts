@@ -1,6 +1,8 @@
 # Author: redmushie (SS14/GitHub) / redmushroom (Discord)
 # Owner: redmushie (SS14/GitHub) / redmushroom (Discord)
 
+> self do "invokeverb self $ID \"1. Theodore Winter\""
+
 # NoAntag
 > self comp:ensure AntagImmune
 > self comp:ensure NoObjectiveTarget
@@ -12,8 +14,6 @@
 #> self spawn:in "head" ClothingHeadHatCentcomcap
 > self spawn:in "shoes" ClothingShoesBootsLaceup
 > self spawn:in "eyes" ClothingEyesGlassesCentCommPrescription => $glasses
-> ent $glasses vv:write "/ShowHealthBars/DamageContainers" "[Biological,Inorganic,Silicon,IPC]"
-> ent $glasses comp:ensure ShowAccessReaderSettings
 > self spawn:in "ears" ClothingHeadsetAltCentCom
 > self spawn:in "gloves" ClothingHandsGlovesHop comp:ensure Insulated
 # > self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
@@ -82,3 +82,10 @@ exec /items/stamp-box.txt
 > self spawn:in "implant" "MindShieldImplant"
 > self spawn:in "implant" "TrackingImplant"
 > self spawn:in "implant" "DeathRattleImplantCentcomm"
+
+# Misc
+> self spawn:on AdminInstantEffectBluespace
+> self role:setjob CentralCommandOfficial
+> self role:setroletype CentCommAligned false
+> self nearby 0 with stainable comp:rm stainable
+

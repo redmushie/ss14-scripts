@@ -14,7 +14,7 @@
 > self spawn:in "eyes" ClothingEyesGlassesJamjarCentComm => $glasses
 > self spawn:in "ears" ClothingHeadsetAltCentCom
 > self spawn:in "gloves" ClothingHandsGlovesHop comp:ensure Insulated
-# > self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
+> self spawn:in "outerClothing" ClothingOuterArmorCentcommCarapace
 # > self spawn:in "mask" "ClothingMask"
 > self spawn:in "id" CentcomPDA
 
@@ -37,14 +37,14 @@ exec /items/stamp-box.txt
 > ent $gavelBlock vv:write "/GavelBlock/MaxCounter" "9999999"
 > ent $bag spawn:in "storagebase" GavelHammer
 
+# Bag: Cheese box
+> ent $bag spawn:in "storagebase" BoxCardboard => $cheeseBox
+> ent $cheeseBox box2iconstructor:new box2iconstructor:add 0 0 7 7 storage:reshape
+
 # Bag: Bluespace implanter, door remote
 > ent $bag spawn:in "storagebase" BluespaceImplanter
 > ent $bag spawn:in "storagebase" DoorRemoteCustom
 #> ent $bag spawn:in "storagebase" Handcuffs
-
-# Bag: Cheese box
-> ent $bag spawn:in "storagebase" BoxCardboard => $cheeseBox
-> ent $cheeseBox box2iconstructor:new box2iconstructor:add 0 0 7 7 storage:reshape
 
 # Cheese box: Cheese wedges
 > i 1 to 64 map { do "ent $cheeseBox spawn:in \"storagebase\" FoodCheeseSlice" }

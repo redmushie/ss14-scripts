@@ -1,0 +1,6 @@
+# before you begin, make sure the container supports it. itll have a TamperSealable component.
+> marked comp:ensure TamperSeal
+> marked vv:write "/TamperSeal/Accesses" "[{allOf: [Syndicate]}]"
+> marked vv:write "/TamperSeal/Color" "'#FF0000FF'"
+> marked vv:write "/TamperSeal/RecipientName" "Syndicate"
+> marked vv:write "/TamperSeal/RecipientExamineColor" "'#FF0000FF'"

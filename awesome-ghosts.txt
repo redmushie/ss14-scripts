@@ -1,1 +1,2 @@
 > entities prototyped MobObserver where { comp:has Actor } vv:write "/MovementSpeedModifier/BaseSprintSpeed" "20" vv:write "/MovementSpeedModifier/BaseWalkSpeed" "10" comp:ensure Speech
+> entities prototyped AdminObserver comp:ensure Speech
