@@ -11,3 +11,7 @@
 > self container:getentities "actions" prototyped ActionGhostBoo vv:write "/Action/UseDelay" "0"
 > self comp:ensure Speech
 > self comp:rm Stealth
+> self container:getentities "neck" delete
+> self container:getentities "head" delete
+> self spawn:in "neck" ClothingNeckCloakMoth
+> self spawn:in "head" ClothingHeadHatHoodMoth

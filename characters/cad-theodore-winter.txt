@@ -63,7 +63,7 @@ exec /items/stamp-box.txt
 > ent $cigarcase container:getentities "storagebase" => $cigars
 > var $cigars vv:write "/MetaData/_entityName" "premium CentComm omnizine cigar"
 > var $cigars vv:write "/Smokable/InhaleAmount" "0.20"
-> var $cigars solution:get "smokable" solution:adjcapacity 10000 solution:adjreagent Nicotine -10 solution:adjreagent Omnizine 6000 solution:adjreagent Fiber 1000 solution:adjreagent Nutriment 1000 solution:adjreagent Water 1000 solution:adjreagent TranexamicAcid 1000
+> var $cigars solution:get "smokable" solution:adjcapacity 10000 solution:adjreagent Nicotine -10 solution:adjreagent Omnizine 6000 solution:adjreagent Fiber 1000 solution:adjreagent Nutriment 1000 solution:adjreagent Water 1000 solution:adjreagent TranexamicAcid 1000 solution:adjcapacity 150
 
 # Name and job
 > self do "vvwrite /entity/$ID/Name \"CAD Executive Assistant 'Theodore Winter'\""

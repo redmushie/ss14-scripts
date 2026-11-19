@@ -4,8 +4,6 @@
 > self inventory:getnamed "back" vv:write "Clothing/ClothingVisuals" "{belt: [{state: invis, visable: False}]}" vv:write "Clothing/EquippedState" "invis"
 > self vv:write "/MetaData/_entityName" "observer"
 > self vv:write "/MetaData/_entityDescription" "Boo!"
-> self vv:write "/MovementSpeedModifier/BaseSprintSpeed" "12"
-> self vv:write "/MovementSpeedModifier/BaseWalkSpeed" "8"
 > self where { comp:has RgbLightController } comp:rm RgbLightController
 > self scale:set [0.01,0.01]
 > self comp:ensure Stealth

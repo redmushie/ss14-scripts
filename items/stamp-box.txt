@@ -15,7 +15,7 @@
 # - "figure it out"
 
 # Row 1
-> ent $stampBox spawn:in "storagebase" RubberStampCAD
+> ent $stampBox spawn:in "storagebase" RubberStampCED
 > ent $stampBox spawn:in "storagebase" RubberStampCentcom
 > ent $stampBox spawn:in "storagebase" RubberStampApproved
 > ent $stampBox spawn:in "storagebase" RubberStampDenied
